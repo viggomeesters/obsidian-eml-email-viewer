@@ -27,6 +27,10 @@ Current release target: `0.1.0`
 - [x] Release assets include `manifest.json`.
 - [x] Release assets include `styles.css`.
 
+## Artifact attestations
+
+The repository contains `.github/workflows/release.yml` with `actions/attest-build-provenance@v3`. GitHub rejected workflow dispatch with `Actions has been disabled for this user`, so release `0.1.0` was created manually. Obsidian can install manual releases, but automated review may recommend enabling GitHub Actions and publishing a workflow-built release with artifact attestations.
+
 ## Directory Submission
 
 - [ ] Sign in to https://community.obsidian.md.
