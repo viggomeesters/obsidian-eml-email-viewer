@@ -1,0 +1,24 @@
+From: Alice Example <alice@example.com>
+To: Bob Example <bob@example.com>
+Subject: Attachment fixture
+Date: Sun, 07 Jun 2026 21:48:00 +0200
+Message-ID: <attachments@example.com>
+Content-Type: multipart/mixed; boundary="mixed-boundary"
+
+--mixed-boundary
+Content-Type: text/plain; charset=utf-8
+
+The report is attached as metadata-only fixture.
+--mixed-boundary
+Content-Type: text/plain; name="report.txt"
+Content-Disposition: attachment; filename="report.txt"
+Content-Transfer-Encoding: base64
+
+UmVwb3J0IGJvZHkK
+--mixed-boundary
+Content-Type: application/pdf; name="invoice.pdf"
+Content-Disposition: attachment; filename="invoice.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQK
+--mixed-boundary--

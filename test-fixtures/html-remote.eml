@@ -1,0 +1,22 @@
+From: Tracker Example <tracker@example.com>
+To: Bob Example <bob@example.com>
+Subject: HTML remote content fixture
+Date: Sun, 07 Jun 2026 21:46:00 +0200
+Message-ID: <html-remote@example.com>
+Content-Type: text/html; charset=utf-8
+
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.example.com/mail.css">
+    <style>body { background-image: url("https://cdn.example.com/pixel.png"); }</style>
+    <script>window.remoteMail = true;</script>
+  </head>
+  <body onload="alert('tracking')">
+    <h1>Invoice ready</h1>
+    <img src="https://tracker.example.com/open.gif" width="1" height="1">
+    <a href="mailto:support@example.com">Reply</a>
+    <a href="https://example.com/account">Account</a>
+    <p>Remote content should not load.</p>
+  </body>
+</html>

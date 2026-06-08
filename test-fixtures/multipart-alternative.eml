@@ -1,0 +1,18 @@
+From: Alice Example <alice@example.com>
+To: Bob Example <bob@example.com>
+Subject: Multipart alternative fixture
+Date: Sun, 07 Jun 2026 21:47:00 +0200
+Message-ID: <multipart@example.com>
+Content-Type: multipart/alternative; boundary="alt-boundary"
+
+--alt-boundary
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Plain alternative with caf=C3=A9.
+--alt-boundary
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>HTML alternative with <strong>caf=C3=A9</strong>.</p>
+--alt-boundary--

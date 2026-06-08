@@ -1,0 +1,11 @@
+From: Broken Example <broken@example.com>
+To: Bob Example <bob@example.com>
+Subject: Malformed MIME fixture
+Date: Sun, 07 Jun 2026 21:50:00 +0200
+Message-ID: <malformed@example.com>
+Content-Type: multipart/mixed; boundary="missing-close"
+
+--missing-close
+Content-Type: text/plain; charset=utf-8
+
+This multipart message never closes its boundary.

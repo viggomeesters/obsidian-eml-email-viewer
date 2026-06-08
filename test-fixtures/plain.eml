@@ -1,0 +1,13 @@
+From: Alice Example <alice@example.com>
+To: Bob Example <bob@example.com>
+Subject: Plain fixture
+Date: Sun, 07 Jun 2026 21:45:00 +0200
+Message-ID: <plain@example.com>
+Content-Type: text/plain; charset=utf-8
+
+Hello Bob,
+
+This is a plain text email fixture for local viewer tests.
+
+Regards,
+Alice

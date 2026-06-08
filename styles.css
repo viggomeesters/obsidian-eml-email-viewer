@@ -1,0 +1,329 @@
+.eml-email-viewer {
+  --eml-border: var(--background-modifier-border);
+  --eml-muted: var(--text-muted);
+  --eml-faint: var(--text-faint);
+  --eml-panel: var(--background-secondary);
+  --eml-panel-alt: var(--background-primary-alt);
+  --eml-accent: var(--interactive-accent);
+  --eml-warning: #9a6700;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  overflow: auto;
+  padding: 16px;
+}
+
+.eml-email-viewer *,
+.eml-email-viewer *::before,
+.eml-email-viewer *::after {
+  box-sizing: border-box;
+}
+
+.eml-email-viewer__header {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--eml-border);
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.eml-email-viewer__title {
+  min-width: 180px;
+}
+
+.eml-email-viewer__filename {
+  color: var(--text-normal);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.eml-email-viewer__path {
+  color: var(--eml-muted);
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+}
+
+.eml-email-viewer__toolbar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.eml-email-viewer__search {
+  align-items: center;
+  background: var(--background-primary);
+  border: 1px solid var(--eml-border);
+  border-radius: 6px;
+  display: flex;
+  gap: 6px;
+  min-height: 34px;
+  min-width: min(340px, 100%);
+  padding: 0 9px;
+}
+
+.eml-email-viewer__search-icon,
+.eml-email-viewer__privacy-icon,
+.eml-email-viewer__warning-icon,
+.eml-email-viewer__blocked-icon {
+  color: var(--eml-muted);
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.eml-email-viewer__search input {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  font-size: 13px;
+  min-width: 120px;
+  outline: 0;
+}
+
+.eml-email-viewer__match-count {
+  color: var(--eml-muted);
+  font-size: 12px;
+  min-width: 76px;
+  text-align: right;
+}
+
+.eml-email-viewer__segmented {
+  border: 1px solid var(--eml-border);
+  border-radius: 6px;
+  display: grid;
+  grid-auto-columns: minmax(58px, auto);
+  grid-auto-flow: column;
+  min-height: 34px;
+  overflow: hidden;
+}
+
+.eml-email-viewer__button,
+.eml-email-viewer__icon-button {
+  align-items: center;
+  background: var(--background-primary);
+  border: 0;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 32px;
+}
+
+.eml-email-viewer__button {
+  border-right: 1px solid var(--eml-border);
+  padding: 0 10px;
+}
+
+.eml-email-viewer__button:last-child {
+  border-right: 0;
+}
+
+.eml-email-viewer__button.is-active,
+.eml-email-viewer__icon-button:hover,
+.eml-email-viewer__button:hover {
+  background: var(--eml-panel-alt);
+  color: var(--text-normal);
+}
+
+.eml-email-viewer__icon-button {
+  border: 1px solid var(--eml-border);
+  border-radius: 6px;
+  min-width: 34px;
+  padding: 0;
+}
+
+.eml-email-viewer__privacy,
+.eml-email-viewer__warnings,
+.eml-email-viewer__blocked {
+  align-items: flex-start;
+  background: var(--eml-panel);
+  border: 1px solid var(--eml-border);
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.eml-email-viewer__privacy {
+  color: var(--eml-muted);
+  font-size: 12px;
+}
+
+.eml-email-viewer__warnings {
+  color: var(--text-normal);
+}
+
+.eml-email-viewer__warning-icon {
+  color: var(--eml-warning);
+}
+
+.eml-email-viewer__warnings ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.eml-email-viewer__section {
+  border: 1px solid var(--eml-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.eml-email-viewer__section-title {
+  background: var(--eml-panel);
+  border-bottom: 1px solid var(--eml-border);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
+.eml-email-viewer__header-grid {
+  display: grid;
+  grid-template-columns: minmax(92px, 140px) minmax(0, 1fr);
+}
+
+.eml-email-viewer__header-label,
+.eml-email-viewer__header-value {
+  border-bottom: 1px solid var(--eml-border);
+  min-width: 0;
+  padding: 8px 10px;
+}
+
+.eml-email-viewer__header-label {
+  background: var(--background-primary-alt);
+  color: var(--eml-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.eml-email-viewer__header-value {
+  color: var(--text-normal);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.eml-email-viewer__header-label:nth-last-child(2),
+.eml-email-viewer__header-value:last-child {
+  border-bottom: 0;
+}
+
+.eml-email-viewer__pre-wrap {
+  background: var(--background-primary);
+  max-height: 58vh;
+  overflow: auto;
+}
+
+.eml-email-viewer__pre {
+  color: var(--text-normal);
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.eml-email-viewer__html-preview {
+  background: var(--background-primary);
+  color: var(--text-normal);
+  max-height: 58vh;
+  overflow: auto;
+  padding: 14px;
+}
+
+.eml-email-viewer__html-preview img:not([src]) {
+  border: 1px dashed var(--eml-border);
+  border-radius: 4px;
+  display: inline-block;
+  min-height: 28px;
+  min-width: 120px;
+}
+
+.eml-email-viewer__attachments {
+  border-collapse: collapse;
+  font-size: 13px;
+  width: 100%;
+}
+
+.eml-email-viewer__attachments th,
+.eml-email-viewer__attachments td {
+  border-bottom: 1px solid var(--eml-border);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.eml-email-viewer__attachments th {
+  background: var(--background-primary-alt);
+  color: var(--eml-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.eml-email-viewer__attachments td {
+  overflow-wrap: anywhere;
+}
+
+.eml-email-viewer__message,
+.eml-email-viewer__cap-note {
+  color: var(--eml-muted);
+  font-size: 13px;
+  padding: 12px;
+}
+
+.eml-email-viewer__cap-note {
+  border-top: 1px solid var(--eml-border);
+}
+
+.eml-email-viewer__highlight {
+  background: color-mix(in srgb, var(--text-accent) 22%, transparent);
+  border-radius: 3px;
+  color: var(--text-normal);
+}
+
+@media (max-width: 760px) {
+  .eml-email-viewer {
+    padding: 10px;
+  }
+
+  .eml-email-viewer__header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .eml-email-viewer__toolbar {
+    justify-content: flex-start;
+  }
+
+  .eml-email-viewer__search,
+  .eml-email-viewer__segmented {
+    width: 100%;
+  }
+
+  .eml-email-viewer__header-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eml-email-viewer__header-label {
+    border-bottom: 0;
+    padding-bottom: 3px;
+  }
+
+  .eml-email-viewer__header-value {
+    padding-top: 3px;
+  }
+}

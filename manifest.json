@@ -1,0 +1,10 @@
+{
+  "id": "eml-email-viewer",
+  "name": "EML Email Viewer",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Open .eml files locally with headers, safe body previews, attachment metadata, and raw MIME source.",
+  "author": "Viggo Meesters",
+  "authorUrl": "https://github.com/viggomeesters",
+  "isDesktopOnly": false
+}

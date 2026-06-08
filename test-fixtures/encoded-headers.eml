@@ -1,0 +1,12 @@
+From: =?UTF-8?Q?Jos=C3=A9_Example?= <jose@example.com>
+To: Bob Example <bob@example.com>
+Cc: Carol Example <carol@example.com>
+Bcc: Audit Example <audit@example.com>
+Subject: =?UTF-8?B?RW5jb2RlZCBoZWFkZXIgY2Fmw6k=?=
+Date: Sun, 07 Jun 2026 21:49:00 +0200
+Message-ID: <encoded@example.com>
+In-Reply-To: <previous@example.com>
+References: <root@example.com> <previous@example.com>
+Content-Type: text/plain; charset=utf-8
+
+Encoded header fixture.
