@@ -12,7 +12,7 @@ const scanned = `${main}\n${parser}\n${styles}`;
 
 assert.equal(manifest.id, "eml-email-viewer");
 assert.equal(manifest.name, "EML Email Viewer");
-assert.equal(manifest.version, "0.1.0");
+assert.equal(manifest.version, "0.1.1");
 assert.ok(!/obsidian/i.test(manifest.description));
 assert.ok(main.includes('const EML_EXTENSIONS = ["eml"]'));
 assert.ok(main.includes("TextFileView"));
@@ -45,6 +45,9 @@ const forbidden = [
   /modify\s*\(/,
   /eval\s*\(/,
   /new Function/,
+  /innerHTML/,
+  /outerHTML/,
+  /insertAdjacentHTML/,
   /!important/,
 ];
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Removed direct HTML property writes from the HTML preview renderer for Obsidian automated review compliance.
+- Rebuilt sanitized HTML preview from an allowlist of safe DOM nodes and attributes.
+
 ## 0.1.0
 
 - Initial read-only `.eml` file viewer.

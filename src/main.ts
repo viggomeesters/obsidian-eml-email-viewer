@@ -203,7 +203,7 @@ class EmlEmailViewerView extends TextFileView {
         return;
       }
       const htmlPreview = section.createDiv({ cls: "eml-email-viewer__html-preview" });
-      htmlPreview.innerHTML = parsed.sanitizedHtml;
+      renderSafeHtml(htmlPreview, parsed.sanitizedHtml);
       renderBlockedRemoteList(section, htmlPreview);
       if (parsed.isHtmlTruncated) {
         section.createDiv({
@@ -314,6 +314,117 @@ function renderBlockedRemoteList(parent: HTMLElement, htmlPreview: HTMLElement):
   const note = parent.createDiv({ cls: "eml-email-viewer__blocked" });
   setIcon(note.createSpan({ cls: "eml-email-viewer__blocked-icon" }), "ban");
   note.createSpan({ text: `${blocked.length} remote or active URL attributes blocked.` });
+}
+
+const SAFE_HTML_TAGS = new Set([
+  "a",
+  "article",
+  "aside",
+  "b",
+  "blockquote",
+  "br",
+  "code",
+  "dd",
+  "del",
+  "div",
+  "dl",
+  "dt",
+  "em",
+  "figcaption",
+  "figure",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "hr",
+  "i",
+  "img",
+  "ins",
+  "li",
+  "main",
+  "ol",
+  "p",
+  "pre",
+  "section",
+  "small",
+  "span",
+  "strong",
+  "sub",
+  "sup",
+  "table",
+  "tbody",
+  "td",
+  "tfoot",
+  "th",
+  "thead",
+  "tr",
+  "u",
+  "ul",
+]);
+
+const SAFE_HTML_ATTRIBUTES = new Set([
+  "abbr",
+  "align",
+  "alt",
+  "aria-label",
+  "colspan",
+  "dir",
+  "lang",
+  "role",
+  "rowspan",
+  "scope",
+  "title",
+]);
+
+function renderSafeHtml(parent: HTMLElement, html: string): void {
+  const document = new DOMParser().parseFromString(html, "text/html");
+  for (const node of Array.from(document.body.childNodes)) {
+    renderSafeNode(parent, node);
+  }
+}
+
+function renderSafeNode(parent: HTMLElement, node: Node): void {
+  if (node.nodeType === Node.TEXT_NODE) {
+    parent.appendText(node.textContent ?? "");
+    return;
+  }
+
+  if (node.nodeType !== Node.ELEMENT_NODE) return;
+
+  const source = node as Element;
+  const tag = source.tagName.toLowerCase();
+  if (!SAFE_HTML_TAGS.has(tag)) {
+    renderSafeChildren(parent, source);
+    return;
+  }
+
+  const target = parent.createEl(tag as keyof HTMLElementTagNameMap);
+  copySafeAttributes(source, target);
+  renderSafeChildren(target, source);
+}
+
+function renderSafeChildren(parent: HTMLElement, source: Element): void {
+  for (const child of Array.from(source.childNodes)) {
+    renderSafeNode(parent, child);
+  }
+}
+
+function copySafeAttributes(source: Element, target: HTMLElement): void {
+  for (const attribute of Array.from(source.attributes)) {
+    const name = attribute.name.toLowerCase();
+    if (isSafeEmailHtmlAttribute(name, attribute.value)) {
+      target.setAttribute(name, attribute.value);
+    }
+  }
+}
+
+function isSafeEmailHtmlAttribute(name: string, value: string): boolean {
+  if (name.startsWith("data-blocked-")) return true;
+  if (name.startsWith("aria-")) return true;
+  if (name === "colspan" || name === "rowspan") return /^\d{1,2}$/.test(value);
+  return SAFE_HTML_ATTRIBUTES.has(name);
 }
 
 function renderPre(parent: HTMLElement, text: string, query: string, truncated: boolean): void {

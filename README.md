@@ -121,8 +121,8 @@ The current release is ready for review when:
 
 - root `README.md`, `LICENSE`, and `manifest.json` exist
 - `manifest.json.id` is `eml-email-viewer`
-- `manifest.json.version` is `0.1.0`
-- GitHub release `0.1.0` exists
+- `manifest.json.version` is `0.1.1`
+- GitHub release `0.1.1` exists
 - release assets include `main.js`, `manifest.json`, and `styles.css`
 - `versions.json` maps supported Obsidian versions
 

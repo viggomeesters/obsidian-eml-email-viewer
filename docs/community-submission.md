@@ -1,6 +1,6 @@
 # Obsidian Community Submission Checklist
 
-Current release target: `0.1.0`
+Current release target: `0.1.1`
 
 ## Repository
 
@@ -16,6 +16,7 @@ Current release target: `0.1.0`
 - [x] `versions.json` maps plugin version to minimum Obsidian version.
 - [x] Runtime code avoids Node.js, Electron, process, clipboard, and plugin network APIs.
 - [x] `main.js` is not tracked in source; it is built for release assets.
+- [x] Runtime code does not assign `innerHTML` or `outerHTML`.
 
 ## Release
 
@@ -29,7 +30,7 @@ Current release target: `0.1.0`
 
 ## Artifact attestations
 
-The repository contains `.github/workflows/release.yml` with `actions/attest-build-provenance@v3`. GitHub rejected workflow dispatch with `Actions has been disabled for this user`, so release `0.1.0` was created manually. Obsidian can install manual releases, but automated review may recommend enabling GitHub Actions and publishing a workflow-built release with artifact attestations.
+The repository contains `.github/workflows/release.yml` with `actions/attest-build-provenance@v3`. GitHub rejected workflow dispatch with `Actions has been disabled for this user`, so releases are created manually. Obsidian can install manual releases, but automated review may recommend enabling GitHub Actions and publishing a workflow-built release with artifact attestations.
 
 ## Directory Submission
 

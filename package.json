@@ -1,6 +1,6 @@
 {
   "name": "obsidian-eml-email-viewer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read-only local .eml email viewer with safe previews and MIME source fallback.",
   "license": "MIT",
   "author": "Viggo Meesters",
