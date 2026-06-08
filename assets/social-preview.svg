@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">EML Email Viewer social preview</title>
+  <desc id="desc">Promotional image for EML Email Viewer.</desc>
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="76" y="78" width="1048" height="474" rx="28" fill="#f8fafc"/>
+  <rect x="118" y="120" width="966" height="68" rx="14" fill="#e2e8f0"/>
+  <text x="152" y="164" fill="#0f172a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="800">local-message.eml</text>
+  <rect x="118" y="226" width="320" height="230" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="478" y="226" width="606" height="230" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="152" y="282" fill="#0f766e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">Headers</text>
+  <text x="152" y="326" fill="#334155" font-family="ui-sans-serif, system-ui, sans-serif" font-size="19">From, To, Subject, Date</text>
+  <text x="152" y="366" fill="#334155" font-family="ui-sans-serif, system-ui, sans-serif" font-size="19">Message-ID and threads</text>
+  <text x="516" y="282" fill="#0f766e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">Safe body preview</text>
+  <text x="516" y="326" fill="#334155" font-family="ui-sans-serif, system-ui, sans-serif" font-size="19">Text, sanitized HTML, raw MIME</text>
+  <text x="516" y="366" fill="#334155" font-family="ui-sans-serif, system-ui, sans-serif" font-size="19">Remote images and active URLs blocked</text>
+  <text x="118" y="520" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="48" font-weight="900">EML Email Viewer</text>
+</svg>

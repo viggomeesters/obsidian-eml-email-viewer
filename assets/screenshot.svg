@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">EML Email Viewer screenshot</title>
+  <desc id="desc">A preview of the EML Email Viewer interface with search, headers, body tabs, warnings, and attachments.</desc>
+  <rect width="1400" height="900" fill="#0f172a"/>
+  <rect x="70" y="64" width="1260" height="772" rx="20" fill="#f8fafc"/>
+  <rect x="104" y="96" width="1192" height="74" rx="12" fill="#e2e8f0"/>
+  <text x="132" y="128" fill="#0f172a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="800">invoice-june.eml</text>
+  <text x="132" y="154" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">Mail/Invoices/invoice-june.eml</text>
+  <rect x="764" y="110" width="270" height="36" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="794" y="133" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">Search headers, body, attachments</text>
+  <rect x="1050" y="110" width="80" height="36" rx="8" fill="#0f766e"/>
+  <text x="1076" y="133" fill="#ffffff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">Text</text>
+  <rect x="1138" y="110" width="80" height="36" rx="8" fill="#334155"/>
+  <text x="1165" y="133" fill="#ffffff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">HTML</text>
+  <rect x="1226" y="110" width="70" height="36" rx="8" fill="#334155"/>
+  <text x="1244" y="133" fill="#ffffff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">Raw</text>
+  <rect x="104" y="194" width="1192" height="50" rx="10" fill="#ecfdf5" stroke="#99f6e4"/>
+  <text x="134" y="224" fill="#115e59" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700">Read-only local preview. Remote images, scripts, external styles, forms, mailto links, and attachment opening are blocked.</text>
+  <rect x="104" y="270" width="520" height="294" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="104" y="270" width="520" height="44" rx="12" fill="#e2e8f0"/>
+  <text x="130" y="298" fill="#475569" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="800">HEADERS</text>
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">
+    <text x="130" y="350" fill="#64748b" font-weight="700">From</text>
+    <text x="250" y="350" fill="#0f172a">Acme Billing &lt;billing@example.com&gt;</text>
+    <text x="130" y="390" fill="#64748b" font-weight="700">To</text>
+    <text x="250" y="390" fill="#0f172a">Viggo &lt;viggo@example.com&gt;</text>
+    <text x="130" y="430" fill="#64748b" font-weight="700">Subject</text>
+    <text x="250" y="430" fill="#0f172a">June invoice ready</text>
+    <text x="130" y="470" fill="#64748b" font-weight="700">Date</text>
+    <text x="250" y="470" fill="#0f172a">Sun, 07 Jun 2026 21:46:00 +0200</text>
+    <text x="130" y="510" fill="#64748b" font-weight="700">Message-ID</text>
+    <text x="250" y="510" fill="#0f172a">&lt;invoice@example.com&gt;</text>
+  </g>
+  <rect x="650" y="270" width="646" height="294" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="650" y="270" width="646" height="44" rx="12" fill="#e2e8f0"/>
+  <text x="676" y="298" fill="#475569" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="800">BODY</text>
+  <text x="680" y="354" fill="#0f172a" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">Hello,</text>
+  <text x="680" y="392" fill="#0f172a" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">Your invoice is ready for local review.</text>
+  <text x="680" y="430" fill="#0f172a" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">Remote content was blocked before rendering.</text>
+  <rect x="650" y="590" width="646" height="150" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="650" y="590" width="646" height="44" rx="12" fill="#e2e8f0"/>
+  <text x="676" y="618" fill="#475569" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="800">ATTACHMENTS (2)</text>
+  <text x="680" y="674" fill="#0f172a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">invoice.pdf</text>
+  <text x="910" y="674" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">application/pdf</text>
+  <text x="1160" y="674" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">metadata only</text>
+  <text x="680" y="714" fill="#0f172a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">report.txt</text>
+  <text x="910" y="714" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">text/plain</text>
+  <text x="1160" y="714" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">metadata only</text>
+  <rect x="104" y="590" width="520" height="150" rx="12" fill="#fffbeb" stroke="#facc15"/>
+  <text x="130" y="628" fill="#854d0e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="800">MIME warnings stay visible</text>
+  <text x="130" y="668" fill="#854d0e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">Malformed boundaries never block raw source fallback.</text>
+  <text x="130" y="706" fill="#854d0e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">Large body previews are capped for responsiveness.</text>
+</svg>

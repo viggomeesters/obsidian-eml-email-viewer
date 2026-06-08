@@ -1,4 +1,5 @@
 node_modules/
 dist/
 .tmp-*.mjs
+main.js
 .DS_Store
