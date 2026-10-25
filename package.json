@@ -1,6 +1,6 @@
 {
   "name": "obsidian-eml-email-viewer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Read-only local .eml email viewer with safe previews and MIME source fallback.",
   "license": "MIT",
   "author": "Viggo Meesters",
@@ -14,7 +14,7 @@
   "homepage": "https://github.com/viggomeesters/obsidian-eml-email-viewer#readme",
   "type": "module",
   "scripts": {
-    "build": "NODE_ENV=production node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production",
     "dev": "node esbuild.config.mjs",
     "test": "node scripts/eml-test.mjs && node scripts/smoke-test.mjs"
   },
