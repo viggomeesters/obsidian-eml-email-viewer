@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 - 2026-10-25
+
+- Cross-platform production build.
+- Current Community installation documentation.
+
+
 ## 0.1.1
 
 - Removed direct HTML property writes from the HTML preview renderer for Obsidian automated review compliance.

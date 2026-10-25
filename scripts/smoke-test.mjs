@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 
 const manifest = JSON.parse(fs.readFileSync("manifest.json", "utf8"));
+const releasePackage = JSON.parse(fs.readFileSync("package.json", "utf8"));
+const releaseVersions = JSON.parse(fs.readFileSync("versions.json", "utf8"));
 const main = fs.readFileSync("src/main.ts", "utf8");
 const parser = fs.readFileSync("src/eml.ts", "utf8");
 const styles = fs.readFileSync("styles.css", "utf8");
@@ -12,7 +14,9 @@ const scanned = `${main}\n${parser}\n${styles}`;
 
 assert.equal(manifest.id, "eml-email-viewer");
 assert.equal(manifest.name, "EML Email Viewer");
-assert.equal(manifest.version, "0.1.1");
+assert.equal(manifest.version, releasePackage.version);
+assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
+assert.equal(releaseVersions[manifest.version], manifest.minAppVersion);
 assert.ok(!/obsidian/i.test(manifest.description));
 assert.ok(main.includes('const EML_EXTENSIONS = ["eml"]'));
 assert.ok(main.includes("TextFileView"));

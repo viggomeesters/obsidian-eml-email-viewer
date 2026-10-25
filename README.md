@@ -53,7 +53,7 @@ The existing community plugin [Email Reader](https://community.obsidian.md/plugi
 
 ### Community plugin directory
 
-EML Email Viewer is ready for submission to the Obsidian Community plugin directory. Once accepted, it can be installed from **Settings -> Community plugins -> Browse** inside Obsidian.
+Install from the [Obsidian Community directory](https://community.obsidian.md/plugins/eml-email-viewer) or search for EML Email Viewer in Settings → Community plugins → Browse.
 
 Manual installation:
 
@@ -107,31 +107,9 @@ The source repository intentionally does not track `main.js`; it is built and at
 
 The repository includes a GitHub Actions release workflow with artifact attestation support. If GitHub Actions is disabled for the owner account, manual releases are still usable for Obsidian, but the Community automated review may show a recommendation about missing artifact attestations.
 
-## Community directory submission
+## Community directory
 
-The repository is prepared for Obsidian Community plugin submission. The remaining submission step must be completed by the repository owner because it requires signing in, linking GitHub, and confirming the developer policies/support commitment.
-
-Submit this repository URL:
-
-```text
-https://github.com/viggomeesters/obsidian-eml-email-viewer
-```
-
-The current release is ready for review when:
-
-- root `README.md`, `LICENSE`, and `manifest.json` exist
-- `manifest.json.id` is `eml-email-viewer`
-- `manifest.json.version` is `0.1.1`
-- GitHub release `0.1.1` exists
-- release assets include `main.js`, `manifest.json`, and `styles.css`
-- `versions.json` maps supported Obsidian versions
-
-Official references:
-
-- [Submit your plugin](https://docs.obsidian.md/Plugins/Releasing/Submit%20your%20plugin)
-- [Manifest](https://docs.obsidian.md/Reference/Manifest)
-- [Versions](https://docs.obsidian.md/Reference/Versions)
-- [Obsidian releases repository](https://github.com/obsidianmd/obsidian-releases)
+EML Email Viewer is listed in the [Obsidian Community directory](https://community.obsidian.md/plugins/eml-email-viewer).
 
 ## License
 
