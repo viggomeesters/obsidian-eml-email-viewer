@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 - 2026-11-16
+
+- Maintenance verification for Obsidian 1.15.1 on macOS desktop.
+- Add reproducible official Obsidian lint checks; no runtime code change.
+
 ## 0.1.2 - 2026-10-25
 
 - Cross-platform production build.
