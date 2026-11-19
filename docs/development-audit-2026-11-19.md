@@ -1,5 +1,8 @@
 # Development dependency assessment — 19 November 2026
 
+> Historical assessment: superseded by [the follow-up](development-audit-2026-11-19-followup.md).
+
+
 The development dependency update reduces the reported advisories without downgrading the official Obsidian linter or forcing cross-major overrides. Repository checks and production audit passed; the production bundle matches the previously published asset. The dependency change alone adds no runtime compatibility claim.
 
 Four moderate dependency nodes remain in the development tooling for one advisory: eslint-plugin-obsidianmd 0.6.0 → @microsoft/eslint-plugin-sdl 1.1.0 → eslint-plugin-n 17.10.3 → minimatch 9.0.9. The affected optimizationLevel >= 2 is not the default used in the previously inspected lint path. This bounds the assessment and does not establish universal immunity or a clean development audit. Recheck supported upstream releases; do not force an incompatible override or downgrade.

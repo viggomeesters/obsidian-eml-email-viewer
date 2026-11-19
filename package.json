@@ -27,5 +27,10 @@
     "obsidian": "1.14.4",
     "typescript": "^5.9.3",
     "typescript-eslint": "8.73.0"
+  },
+  "overrides": {
+    "@microsoft/eslint-plugin-sdl": {
+      "eslint-plugin-n": "17.24.0"
+    }
   }
 }
